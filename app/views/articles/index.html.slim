@@ -1,2 +1,12 @@
 h1
-	| This is Ariticles Page
+	| 这里是一堆文章
+
+table
+	tr 
+		th 标题
+		th 内容
+	- @articles.each do |article| 
+		tr
+			td = article.title 
+			td = article.content
+			td = link_to '显示详情', article_path(article)

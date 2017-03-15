@@ -1,0 +1,25 @@
+p 
+	strong 
+		| Title: 
+	= @article.title
+p 
+	strong 
+		| Content: 
+	= @article.content
+
+= link_to '返回', articles_path
+
+h2
+	| 这里是一堆评论
+- @article.comments.each do |comment|
+	p
+		= comment.body
+
+h2
+	| 添加一个评论
+= form_for([@article, @article.comments.build]) do |f|
+	p 
+		= f.label :body
+		= f.text_area :body
+	p 
+		= f.submit
