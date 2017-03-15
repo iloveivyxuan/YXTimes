@@ -1,6 +1,6 @@
 class Article < ApplicationRecord
 
-	validates :titile, presence: true,
+	validates :title, presence: true,
 										 length: { maximum: 50}
 
 	enum hot_status: { not_focus: 0, focus: 1}

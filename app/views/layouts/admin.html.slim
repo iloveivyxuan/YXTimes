@@ -12,6 +12,6 @@ html
 		h1 
 			| Dashboard Page
 		= link_to '首页', admin_root_path
-		= link_to '文章', admin_articles_path
+		= link_to '文章', controller: 'admin/articles'
 		= yield
 
