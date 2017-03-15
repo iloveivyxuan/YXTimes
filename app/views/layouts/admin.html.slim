@@ -1,0 +1,17 @@
+doctype html
+html
+	head
+		title YXTimes | 银杏时报
+		mets charset="utf-8"
+		meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1"
+		= csrf_meta_tags
+		= stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track': 'reload'
+		= javascript_include_tag 'admin', 'data-turbolinks-track': 'reload'
+
+	body
+		h1 
+			| Dashboard Page
+		= link_to '首页', admin_root_path
+		= link_to '文章', admin_articles_path
+		= yield
+
