@@ -5,6 +5,12 @@
 	p 
 		= f.label :content
 		= f.text_area :content
+	p
+		= f.label :tag
+		= f.select :tag, Article.tags.keys.to_a
+	p
+		= f.label :hot_status
+		= f.select :hot_status, [['普通文章', false], ['选为聚焦', true]]
 	p 
 		= f.submit
 		= link_to '返回', admin_articles_path

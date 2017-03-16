@@ -1,0 +1,16 @@
+h1
+	| 这里是一堆赛事的文章
+
+= link_to '添加新赛事', new_admin_match_path
+
+table
+	tr 
+		th 名称
+		th 分类
+	- @matches.each do |match| 
+		tr
+			td = match.name 
+			td = match.kind
+			td = link_to '显示详情', admin_match_path(match)
+			td = link_to '编辑', edit_admin_match_path(match)
+			td = link_to '删除', admin_match_path(match),  data: { method: :delete, confirm: 'Are you sure?' }

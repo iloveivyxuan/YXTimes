@@ -7,10 +7,18 @@ table
 	tr 
 		th 标题
 		th 内容
+		th 阅读量
+		th 点赞量
+		th 标签
+		th 是否是聚焦
 	- @articles.each do |article| 
 		tr
 			td = article.title 
 			td = article.content
+			td = article.views
+			td = article.likes
+			td = article.tag
+			td = article.hot_status
 			td = link_to '显示详情', admin_article_path(article)
 			td = link_to '编辑', edit_admin_article_path(article)
 			td = link_to '删除', admin_article_path(article), method: :delete, data: { confirm: 'Are you sure?' }

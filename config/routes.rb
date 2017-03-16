@@ -1,14 +1,24 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   root 'welcome#index'
 
   resources :articles do
-  	resources :comments
+    resources :comments
+  end
+
+  resources :matches do
+    resources :articles do
+      resources :comments
+    end
   end
 
   namespace :admin do
-    root 'home#index'
+    get '/' => 'home#index'
     resources :articles
+    resources :matches do 
+      resources :articles
+    end
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -9,6 +9,11 @@ html
 		= javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
 	body
+		p.notice
+			= notice
+		p.alert
+			= alert
+
 		= link_to '首页', root_path
 		= link_to '文章', controller: 'articles'
 		= yield

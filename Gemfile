@@ -36,6 +36,8 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Carrierwave to upload files in this application
 gem 'carrierwave', '~> 1.0'
+# Use Devise as authentication solution
+gem 'devise', '~> 4.2'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

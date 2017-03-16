@@ -1,0 +1,10 @@
+= form_for [:admin, @match] do |f|
+	p 
+		= f.label :name
+		= f.text_field :name
+	p
+		= f.label :kind
+		= f.select :kind, Match.kinds.keys.to_a
+	p 
+		= f.submit
+		= link_to '返回', admin_matches_path

@@ -11,7 +11,9 @@ html
 	body
 		h1 
 			| Dashboard Page
-		= link_to '首页', admin_root_path
+		= link_to '首页', admin_path
 		= link_to '文章', controller: 'admin/articles'
+		= link_to '赛事', controller: 'admin/matches'
+		= link_to '投票', controller: 'admin/matches'
 		= yield
 
